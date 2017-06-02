@@ -1,0 +1,31 @@
+Q： 很多订单被取消，driving distance差距过大
+2017.02.22 20:45 taxi.py
+        def is_available(self):
+            #return self.num_riders < self.capacity and len(self.schedule) != 0
+            return self.num_riders < self.capacity #修改后
+
+
+Q:调用dispather混乱
+2017.02.22 22：07
+        修正了msdispatcher的参数错误
+        修正了mssimulation的import dispatcher错误
+
+2017.02.22 22:51
+        修正了mssimulation中调用dispatcher.dispatcher_taxi（）时缺少参数self.query_set的问题
+
+2017.02.23 15:36
+        修改了msdispatcher.grid_search()方法中的代码： 将 return gird_list 放在最外层
+
+2017.02.24 20:15
+        d_candi_taxi_list[]始终为空
+
+2017.03.16
+    修改了PATIENCE = 10 * 60
+    修改了query的delivery 时间窗的deadline为直线行驶时间的1.5倍
+    修改了taxi的数目：2980->33000
+2017.03.18
+    搜不到车的原因： 底层实现中taxi_list中存储的是到达时刻，而不是达到所需要的时间长度；
+2013.03.29
+    Taxi: 添加了load属性；
+    Taxi._update_schedule_distance: 添加了更新负载的语句
+
